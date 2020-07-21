@@ -8,7 +8,7 @@ for (( ; ; ))
 do
 if pgrep 7DaysToDie;
 then
-echo "Hi"
+echo "Start Broadcasts."
 sleep 5
 
 broadcasts/broadcast1.expect
