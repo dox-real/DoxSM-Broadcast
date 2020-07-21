@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+
+set timeout 999999
+set password <PASSWORD>
+
+
+spawn telnet <IP/HOSTNAME> <PORT>
+sleep 2
+
+expect "Please enter password:"
+
+sleep 2
+send "$password"
+
+sleep 3
+send -- "say \"<BROADCAST4>\" \r"
+sleep 5
+send -- "exit \r"
+sleep 1
